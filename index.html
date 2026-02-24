@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P_Cuks | Welcome</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="icon" type="images/png" href="images/logo.jpeg">
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header id="navbar">
+      <div class="logo-container">
+        <img src="/images/logo.jpeg" alt="Logo" class="logo-img" />
+        <h1>P_Cuks <span>Food Kitchen</span></h1>
+      </div>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Menu</a>
+        <a href="#">Contact</a>
+      </nav>
+
+      <a href="#">
+        <i class="fa-solid fa-cart-arrow-down"></i>
+        <span id="cart-count">0</span>
+      </a>
+      <button id="darkToggle" class="dark-toggle">🌙</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h3>Welcome to</h3>
+        <h2>P_Cuks <span>Food Kitchen</span></h2>
+
+        <p>
+          We are a kitchen dedicated to serving delicious meals and refreshing
+          drinks right to your doorstep. With a wide variety of dishes to choose
+          from, we are confident you will find something you love.
+          <br /><br />
+          Our menu also features healthy options and a variety of beverages,
+          including cocktails, beer, and wine. Place your order today and enjoy
+          a satisfying meal delivered fresh to you!
+        </p>
+
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfemEY5t6YqxvLzCaT1RD1tVwYf2jyGXB9PCqHH9m19yJculg/viewform?usp=sharing&ouid=109640121118998413781"
+          target="_blank"
+          class="order-btn"
+        >
+          Order Now
+        </a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about fade-in">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>Our Story</h2>
+          <p>
+            P_Cuks Food Kitchen was founded with the goal of providing delicious
+            meals and refreshing drinks to customers in the comfort of their own
+            homes. We understand that in today’s fast-paced world, it can be
+            difficult to find time to cook a healthy and satisfying meal.
+            <br /><br />
+            That is why we offer a wide variety of dishes made with fresh
+            ingredients and delivered right to your doorstep.
+          </p>
+
+          <h2>Our Founder</h2>
+          <h3>P_Cuks</h3>
+        </div>
+
+        <div class="about-images">
+          <div class="image-holder">
+            <img src="/images/carotrice.jpg" alt="Delicious Food 1" />
+          </div>
+          <div class="image-holder">
+            <img src="/images/jollofrice (1).jpg" alt="Delicious Food 2" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <section class="menu fade-in">
+      <div class="menu-content">
+        <h2>Our Menu</h2>
+        <p>
+          Our menu features a wide variety of dishes made with fresh
+          ingredients. We offer vegetarian, vegan, and gluten-free options to
+          ensure everyone can enjoy a delicious meal.
+          <br /><br />
+          Whether you're in the mood for a hearty meal or a light snack, we have
+          something for everyone.
+        </p>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us fade-in">
+      <div class="about-us-content">
+        <h2>About Us</h2>
+        <p>
+          At P_Cuks Food Kitchen, we are passionate about providing our
+          customers with delicious meals and refreshing drinks. Our experienced
+          chefs use only the freshest ingredients to create flavors you will
+          love.
+          <br /><br />
+          Place your order today and experience the taste of excellence!
+        </p>
+      </div>
+    </section>
+
+    <!-- Food Section -->
+    <section class="food-section fade-in">
+      <h2 class="section-title">Popular Dishes</h2>
+
+      <div class="food-grid">
+        <div class="food-card">
+          <img src="/images/jollofrice (1).jpg" alt="2 Liters Party Jollof" />
+          <div class="food-info">
+            <h3>2 Liters Party Jollof</h3>
+            <p>€60.00</p>
+            <button
+              class="add-to-cart"
+              data-name="2 Liters Party Jollof"
+              data-price="60"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+
+        <div class="food-card">
+          <img src="/images/meatpie.jpg" alt="meat pie" />
+          <div class="food-info">
+            <h3>1 Dozen of Meat Pie</h3>
+            <p>€15.00</p>
+            <button
+              class="add-to-cart"
+              data-name="1 Dozen of Meat Pie"
+              data-price="15"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      
+    </section>
+
+<section class="food-section fade-in">
+      <h2 class="section-title">Flyer</h2>
+
+      <div class="food-flyer">
+        <div class="flyer">
+          <img src="/images/flyer.jpeg" alt="Food Flyer" />
+        </div>
+      </div>
+    </section>
+
+
+<!-- WhatsApp Order Button -->
+<div class="whatsapp-order">
+  <a href="https://wa.me/2348145800372?text=Hello%20P_Cuks!%20I%20would%20like%20to%20place%20an%20order." target="_blank">
+    <button>Order via WhatsApp</button>
+  </a>
+</div>
+
+    <!-- Checkout Modal -->
+    <div class="checkout-modal" id="checkoutModal">
+      <div class="checkout-content">
+        <span class="close-modal" id="closeModal">&times;</span>
+        <h2>Checkout</h2>
+
+        <div id="cart-items"></div>
+
+        <h3>Total: $<span id="cart-total">0</span></h3>
+
+        <button id="pay-btn" class="pay-btn">Proceed to Payment</button>
+      </div>
+    </div>
+
+
+    <!-- Footer Section -->
+
+    <!-- Wave Divider -->
+<div class="footer-wave">
+  <svg viewBox="0 0 1440 320">
+    <path fill="#111" fill-opacity="1"
+      d="M0,192L80,202.7C160,213,320,235,480,224C640,213,800,171,960,165.3C1120,160,1280,192,1360,208L1440,224L1440,320L0,320Z">
+    </path>
+  </svg>
+</div>
+<div class="map-container">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18..."
+    width="100%" 
+    height="200" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy">
+  </iframe>
+</div>
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-col">
+      <h2 class="footer-logo">P_Cuks <span>Food Kitchen</span></h2>
+      <p>
+        Serving delicious meals made with love and fresh ingredients.
+        Experience premium dining delivered to your doorstep.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <p>Email: info@pcuks.com</p>
+      <p>Phone: +49 (1521) 921-0204</p>
+      <p>Location: Bremen, Germany</p>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-col">
+      <h3>Subscribe</h3>
+      <p>Get updates on new dishes and special offers.</p>
+      <form 
+  action="https://gmail.us8.list-manage.com/subscribe/post?u=73ec930a2f8f1221e8ba51ffd&amp;id=4c067f0e90&amp;f_id=00b98ce0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="newsletter-form"
+>
+  <input type="email" name="EMAIL" placeholder="Enter your email" required>
+  <button type="submit">Subscribe</button>
+</form>
+
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/peace.agbefe" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/peace.agbefe" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://x.com/peaceagbefe" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 P_Cuks Food Kitchen. All rights reserved.</p>
+  </div>
+
+</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
