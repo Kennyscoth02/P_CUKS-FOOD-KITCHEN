@@ -118,19 +118,6 @@ document.getElementById("pay-btn").addEventListener("click", async () => {
   alert("Stripe test integration requires backend server.");
 });
 
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.from(".food-card", {
-  scrollTrigger: {
-    trigger: ".food-section",
-    start: "top 80%",
-  },
-  y: 50,
-  opacity: 0,
-  duration: 1,
-  stagger: 0.3,
-});
-
 gsap.from(".about-text", {
   scrollTrigger: {
     trigger: ".about",
