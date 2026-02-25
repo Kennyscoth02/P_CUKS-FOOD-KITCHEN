@@ -17,7 +17,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 100px;
+  padding: 0 5%;
   width: 100%;
   height: 70px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -667,18 +667,8 @@ header.scrolled {
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translateY(-8px);
 }
-
-.nav-links {
-  transition: transform 0.5s cubic-bezier(0.77, 0, 0.18, 1);
-}
-
-.nav-links.active {
-  transform: translateX(0);
-}
-
-.nav-links {
-  transform: translateX(100%);
-}
+/* navigation transition only needed for mobile menu */
+/* rules below in the mobile media query will handle animation */
 
 /* ================= MOBILE MENU ================= */
 @media (max-width: 768px) {
@@ -745,4 +735,154 @@ section {
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+}
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 1024px) {
+  header {
+    padding: 0 5%;
+  }
+
+  .about,
+  .menu,
+  .food-section,
+  .about-us,
+  .footer {
+    padding: 80px 5%;
+  }
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 768px) {
+  /* Navbar */
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background: white;
+    flex-direction: column;
+    padding-top: 40px;
+    transition: 0.4s ease;
+  }
+
+  .nav-links a {
+    display: block;
+    margin: 20px;
+    font-size: 18px;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Hero */
+  .hero {
+    height: 90vh;
+    padding: 0 5%;
+    text-align: center;
+  }
+
+  .hero-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  /* About Section */
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-images {
+    width: 100%;
+  }
+
+  /* Food Grid */
+  .food-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input {
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .newsletter-form button {
+    border-radius: 5px;
+  }
+}
+
+/* ================= SMALL PHONES ================= */
+
+@media (max-width: 480px) {
+  header {
+    height: 60px;
+  }
+
+  .logo-container h1 {
+    font-size: 18px;
+  }
+
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .food-card img {
+    height: 180px;
+  }
+
+  .checkout-content {
+    width: 95%;
+    padding: 20px;
+  }
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Image containers and flyer responsiveness */
+.food-flyer,
+.about-images,
+.image-holder,
+.flyer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* ensure flyer image does not exceed parent */
+.flyer img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
 }

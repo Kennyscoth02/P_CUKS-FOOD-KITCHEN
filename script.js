@@ -25,6 +25,15 @@ overlay.addEventListener("click", () => {
   overlay.classList.remove("active");
 });
 
+// close mobile menu when a link is selected
+navLinks.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navLinks.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+});
+
 // FADE-IN ANIMATION
 const faders = document.querySelectorAll(".fade-in");
 
